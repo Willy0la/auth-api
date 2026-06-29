@@ -68,7 +68,7 @@ npm run start:prod
 | POST | `/user/login` | Login with password or PIN | None |
 | GET | `/user/:id` | Get user profile by ID | Required |
 
-Swagger docs available at `http://localhost:5000/api` in development.
+Swagger docs available at `http://localhost:5000/api` in development .
 
 ---
 
