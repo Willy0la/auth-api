@@ -1,8 +1,8 @@
 {
   "name": "user-welcome",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "description": "auth-api",
+  "author": "willy0la",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
