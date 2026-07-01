@@ -21,7 +21,7 @@ export class UserController {
   constructor(private readonly userService: UserService) {
     this.logger.log('User controller has been initialised');
   }
-  @ApiOperation({ summary: 'Create a new user account' }) // describes the endpoint
+  @ApiOperation({ summary: 'Create a new user account' }) 
   @Post('/register')
   async createUser(@Body() dto: SignUpDto) {
     return this.userService.createUser(dto);
