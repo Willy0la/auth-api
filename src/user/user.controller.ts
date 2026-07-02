@@ -4,8 +4,8 @@ import {
   Logger,
   Post,
   Get,
-  Param,
   UseGuards,
+  Req,
 } from '@nestjs/common';
 import { UserService } from './user.service';
 import { SignUpDto } from 'src/Dto/SignUp.dto';
@@ -36,8 +36,9 @@ export class UserController {
   @ApiBearerAuth()
   @ApiOperation({ summary: 'Get user profile by ID' })
   @UseGuards(JwtAuthGuard)
-  @Get(':id')
-  async getProfile(@Param('id') id: string) {
-    return await this.userService.fetchUser(id);
+  @Get('/me')
+  async getProfile(@Req() req: Request & { user: { id: string } }) {
+    const userId = req.user.id;
+    return await this.userService.fetchUser(userId);
   }
 }
