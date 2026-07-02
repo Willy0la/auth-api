@@ -66,7 +66,7 @@ npm run start:prod
 |---|---|---|---|
 | POST | `/user/register` | Create a new user account | None |
 | POST | `/user/login` | Login with password or PIN | None |
-| GET | `/user/:id` | Get user profile by ID | Required |
+| GET | `/user/me` | Get user profile: ID extracted from Bearer token|required
 
 Swagger docs available at `http://localhost:5000/api` in development .
 
